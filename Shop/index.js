@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   if (!isLoggedIn()) {
     alert("Please login first");
-    window.location.href = "/Login";
+    window.location.href = "/shopping-cart-js/Login";
   }
   fetchProducts();
 });

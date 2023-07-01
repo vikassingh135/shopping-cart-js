@@ -1,2 +1,2 @@
-document.getElementById("login-btn").addEventListener('click',()=>window.location.href="/Login")
-document.getElementById("signup-btn").addEventListener('click',()=>window.location.href="/Signup")
+document.getElementById("login-btn").addEventListener('click',()=>window.location.href="/shopping-cart-js/Login")
+document.getElementById("signup-btn").addEventListener('click',()=>window.location.href="/shopping-cart-js/Signup")

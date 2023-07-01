@@ -2,7 +2,7 @@
 window.addEventListener('load', async () => {
   if(!isLoggedIn()){
     alert('Please login first');
-    window.location.href='/Login'
+    window.location.href='/shopping-cart-js/Login'
   }
 
   const currentUser = await JSON.parse(localStorage.getItem("currentUser"));
@@ -68,7 +68,7 @@ const changePassword = async () => {
 const logout = () => {
     event.preventDefault();
     localStorage.removeItem("currentUser");
-    window.location.href = '/Login';
+    window.location.href = '/shopping-cart-js/Login';
 }
 
 const isLoggedIn = () => {

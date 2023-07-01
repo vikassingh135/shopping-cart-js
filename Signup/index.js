@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
   if(isLoggedIn()){
     alert("You are alerady logged in");
-    window.location.href='/Shop';
+    window.location.href='/shopping-cart-js/Shop';
   }
 });
 
@@ -45,7 +45,7 @@ const signup = async () => {
   
   localStorage.setItem("users", JSON.stringify(users));
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
-  window.location.href="/Login"
+  window.location.href="/shopping-cart-js/Login"
 };
 
 const generateAccessToken = () => {
