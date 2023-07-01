@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
    if(isLoggedIn()){
      alert("You are alerady logged in");
-     window.location.href='/Shop';
+     window.location.href='/shopping-cart-js/Shop';
    }
  });
  
@@ -23,7 +23,6 @@ const login = async () => {
    console.log(user);
    if(!user) {
     alert("Please register first");
-    // window.location.href = '/Login'
     return;
    }
    console.log(user[0].password, password);
@@ -32,7 +31,7 @@ const login = async () => {
     return;
    }
    localStorage.setItem("currentUser", JSON.stringify(user[0]));
-   window.location.href = "/Shop";
+   window.location.href = "/shopping-cart-js/Shop";
 }
 
 const isLoggedIn = () => {

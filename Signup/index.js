@@ -45,7 +45,7 @@ const signup = async () => {
   
   localStorage.setItem("users", JSON.stringify(users));
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
-  window.location.href="/shopping-cart-js/Login"
+  window.location.href="/shopping-cart-js/Shop"
 };
 
 const generateAccessToken = () => {
