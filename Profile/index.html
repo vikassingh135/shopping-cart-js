@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MeShop Profile</title>
+</head>
+<body>
+    
+     <!-- Nav Section -->
+     <nav>
+        <div class="nav-left">
+            <span>MeShop.</span>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <form>
+        <h2 class="form-heading">My Profile</h2>
+        <input id="fName" placeholder="First Name"/>
+        <input id="lName" placeholder="Last Name"/>
+        <button onclick="saveInfo()">Save Info</button>
+    </form>
+
+    <form>
+        <h2 class="form-heading">Edit Password</h2>
+        <input id="old-password" type="password" placeholder="Old Password"/>
+        <input id="new-password" type="password" placeholder="New Password"/>
+        <input id="confirm-password" type="password" placeholder="Confirm New Password"/>
+        <button onclick="changePassword()">Change Password</button>
+        <button onclick="logout()">Logout</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>

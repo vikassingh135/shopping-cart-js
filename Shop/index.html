@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MeShop Shop</title>
+  </head>
+  <body>
+    <!-- Nav Section -->
+    <nav>
+      <div class="nav-left">
+        <span>MeShop.</span>
+      </div>
+      <div class="nav-right">
+        <a href="/">Home</a>
+        <a href="/Login">Login</a>
+        <a href="/Signup">Signup</a>
+        <a href="/Shop">Shop</a>
+        <a href="/Cart">My Cart</a>
+        <a href="/Profile">Profile</a>
+    </div>
+    </nav>
+
+    <main>
+      <div class="sidebar">
+
+        <!-- Colors -->
+
+        <div class="colors">
+          <div class="sidebar-heading">Colors</div>
+          <div class="checkbox">
+            <input class="color" id="Red" type="checkbox" value="Red"/>
+            <label for="Red">Red</label>
+          </div>
+          <div class="checkbox">
+            <input class="color" id="Blue" type="checkbox" value="Blue"/>
+            <label for="Blue">Blue</label>
+          </div>
+          <div class="checkbox">
+            <input class="color" id="Green" type="checkbox" value="Green"/>
+            <label for="Green">Green</label>
+          </div>
+          <div class="checkbox">
+            <input class="color" id="Black" type="checkbox" value="Black"/>
+            <label for="Black">Black</label>
+          </div>
+          <div class="checkbox">
+            <input class="color" id="White" type="checkbox" value="White"/>
+            <label for="White">White</label>
+          </div>
+        </div>
+
+        <!-- Sizes -->
+
+        <div class="sizes">
+          <div class="sidebar-heading">Sizes</div>
+          <div class="checkbox">
+            <input class="size" id="S" type="checkbox" value="S"/>
+            <label for="S">S</label>
+          </div>
+          <div class="checkbox">
+            <input class="size" id="M" type="checkbox" value="M"/>
+            <label for="M">M</label>
+          </div>
+          <div class="checkbox">
+            <input class="size" id="X" type="checkbox" value="X"/>
+            <label for="X">X</label>
+          </div>
+          <div class="checkbox">
+            <input class="size" id="L" type="checkbox" value="L"/>
+            <label for="L">L</label>
+          </div>
+        </div>
+        <div class="rating">
+          <div class="sidebar-heading">Rating</div>
+          <div class="range-input">
+          <span>0</span>  
+          <input type="range" min="0" max="5" value="5" id="range-input"/>
+          <span id="range-max-value">5</span>
+          </div>
+        </div>
+        <div class="price-range">
+          <div class="sidebar-heading">Price Range</div>
+          <div class="checkbox">
+            <input class="price" id="price25" type="checkbox" value="25"/>
+            <label for="price25">$0 to $25</label>
+          </div>
+          <div class="checkbox">
+            <input class="price" id="price50" type="checkbox" value="50"/>
+            <label>$25 to $50</label>
+          </div>
+          <div class="checkbox">
+            <input class="price" id="price100" type="checkbox" value="100"/>
+            <label>$50 to $100</label>
+          </div>
+          <div class="checkbox">
+            <input class="price" id="price101" type="checkbox" value="101"/>
+            <label>$100 onwards</label>
+          </div>
+        </div>
+        <div class="filer">
+          <button id="filter-btn">Apply Filter</button>
+        </div>
+      </div>
+      <div class="right-side">
+        <div id="search-input">
+          <span class="material-symbols-outlined" id="search-symbol">
+            search
+            </span>
+          <input type="text" id="search-btn" placeholder="Search"/>
+        </div>
+        <div class="categories">
+          <button class="selected-category category" id="all">All</button>
+          <button class="category" id="men's clothing">Mens</button>
+          <button class="category" id="women's clothing">Womens</button>
+          <button class="category" id="jewelery">Jewellary</button>
+          <button class="category" id="electronics">Electronics</button>
+        </div>
+        <div class="category-product">
+          <h2 id="category-name">All</h2>
+          <div class="products"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

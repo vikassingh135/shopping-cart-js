@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-right {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav  a, nav span{
+    font-size: 1.3rem;
+}
+
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 10%;
+    gap: 25px;
+    font-size: 1.1rem;
+}
+
+form{
+    font-size: 25px;
+}
+
+form > input{
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 1px solid black;
+}
+
+form > button{
+    font-size: 1.2rem;
+    padding: 8px 25px;
+    background-color: black;
+    color: white;
+    width: fit-content;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-section img {
+      width: auto;
+      height: 70%;
+    }
+    .nav-right {
+      width: 40%;
+    }
+  }

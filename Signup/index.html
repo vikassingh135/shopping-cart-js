@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MeShop Signup</title>
+</head>
+<body>
+    
+     <!-- Nav Section -->
+     <nav>
+        <div class="nav-left">
+            <span>MeShop.</span>
+        </div> 
+        <div class="nav-right">
+            <a href="/">Home</a>
+            <a href="/Login">Login</a>
+            <a href="/Signup">Signup</a>
+            <a href="/Cart">My Cart</a>
+            <a href="/Profile">Profile</a>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <form>
+        <h2>Signup</h2>
+        <input id="fName" placeholder="First Name"/>
+        <input id="lName" placeholder="Last Name"/>
+        <input id="email" type="email" placeholder="Email"/>
+        <input id="password" type="password" placeholder="Password"/>
+        <input id="confirm-password" type="password" placeholder="Confirm Password"/>
+        <button onclick="signup()">Signup</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
