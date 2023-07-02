@@ -7,8 +7,9 @@
 }
 
 nav {
-  height: 64px;
-  position: sticky;
+  width: 100%;
+  /* height: 10vh; */
+  position: fixed;
   top: 0;
   background-color: black;
   color: white;
@@ -40,16 +41,17 @@ main {
 }
 
 .sidebar {
-  position: sticky;
+  width: 200px;
+  position: fixed;
   left: 0;
-  top: 64px;
+  top: 63px;
   background-color: black;
   color: white;
-  /* height: 90vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 90vh;
+  height: 90%;
+  overflow: auto;
 }
 
 .sidebar > div {
@@ -58,7 +60,7 @@ main {
 }
 
 .sidebar-heading {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
@@ -68,18 +70,19 @@ main {
   justify-content: space-between;
 }
 
+
 .sidebar button {
   font-size: 1.1rem;
-  margin: 10px 12px;
-  padding: 5px 15px;
+  padding: 7px 10px;
   background-color: black;
   color: white;
   border: 1px solid white;
-  width: fit-content;
 }
 
 .right-side {
   padding: 20px;
+  margin-top: 70px;
+  margin-left: 200px;
 }
 
 .products {
@@ -153,7 +156,8 @@ main {
 .categories{
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 20px;
   padding-top: 30px;
   padding-bottom: 20px;
 }
@@ -173,6 +177,7 @@ main {
 .range-input {
   display: flex;
   justify-content: space-between;
+  gap: 5px;
 }
 
 .range-input > div {
@@ -195,7 +200,8 @@ main {
 }
 
 .checkbox{
-  margin-bottom: 3px;
+  margin-bottom: 4px;
+  font-size: 15px;
 }
 
 .add-item{
@@ -206,13 +212,18 @@ main {
   gap: 10px;
 }
 
-#filter-btn{
+.filer{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  padding: 5px 10px;
-  margin: 3px;
+}
+
+#filter-btn{
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
 }
 
 .material-symbols-outlined {
@@ -227,4 +238,36 @@ main {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar{
+    display: none;
+  }
+
+  .right-side{
+    margin-left: 0;
+  }
+
+  /* .categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  } */
+
+  .products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
 }

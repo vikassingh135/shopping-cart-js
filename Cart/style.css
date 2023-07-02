@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,9 @@
 }
 
 nav {
-  position: sticky;
+  width: 100%;
+  /* height: 10vh; */
+  position: fixed;
   top: 0;
   background-color: black;
   color: white;
@@ -34,6 +37,7 @@ a{
 }
 
 main {
+  margin-top: 70px;
   padding: 40px 40px;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -95,7 +99,7 @@ main {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
@@ -192,4 +196,56 @@ main {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+  .nav-right{
+    width: 50%;
+  }
+
+  
+}
+
+@media screen and (max-width: 720px) {
+
+  .nav-right{
+    width: 60%;
+  }
+
+  main{
+    display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  }
+
+  .products{
+    grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+
+  .nav-left{
+    display: none;
+  }
+
+  .nav-right{
+    width: 100%;
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .products{
+    grid-template-columns: 1fr;
+  }
+  
 }
