@@ -1,13 +1,24 @@
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
   if (!isLoggedIn()) {
     alert("Please login first");
     window.location.href = "/shopping-cart-js/Login";
   }
-  showFilteredProduct();
+
+  try {
+    const productsJSON = await fetch("https://fakestoreapi.com/products");
+    productsObj = await productsJSON.json();
+    console.log("prdocuts", productsObj);
+    productsObj.forEach((product) => {
+      product.color = randomColor();
+      product.size = randomSize();
+    });
+    showFilteredProduct();
+  } catch (error) {
+    console.log(error);
+  }
 });
 
-let productsObj;
-
+let productsObj = [];
 
 //function to show filtered product
 const showFilteredProduct = async () => {
@@ -36,22 +47,17 @@ const showFilteredProduct = async () => {
     if (price.checked) prices.push(price.id);
   }
 
-  try {
-    const products = document.getElementsByClassName("products")[0];
-    const productsJSON = await fetch("https://fakestoreapi.com/products");
-    productsObj = await productsJSON.json();
-    console.log("prdocuts", productsObj);
-    products.innerHTML = "";
-    const category = document.getElementsByClassName("selected-category")[0].id;
-    productsObj.forEach((product) => {
-      //category checking
-      if (category === "all" || product.category === category) {
-        displayFilterProduct(product, colors, sizes, rating, prices);
-      }
-    });
-  } catch (error) {
-    console.log(error);
-  }
+  console.log(colors, sizes, rating, prices);
+
+  const products = document.getElementsByClassName("products")[0];
+  products.innerHTML = "";
+  const category = document.getElementsByClassName("selected-category")[0].id;
+  productsObj.forEach((product) => {
+    //category checking
+    if (category === "all" || product.category === category) {
+      displayFilterProduct(product, colors, sizes, rating, prices);
+    }
+  });
 };
 
 document
@@ -61,10 +67,6 @@ document
 // Display Filtered Product
 const displayFilterProduct = (product, colors, sizes, rating, prices) => {
   const products = document.getElementsByClassName("products")[0];
-
-  product.color = randomColor();
-  product.size = randomSize();
-
   const filterValue = document.getElementById("search-btn").value;
 
   if (product.title.toLowerCase().indexOf(filterValue.toLowerCase()) < 0)
