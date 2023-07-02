@@ -86,7 +86,7 @@ const calculateTotalValue = (productsObj) => {
 fetchProducts();
 // Payment
 var options = {
-  key: "rzp_test_PV1oQ0oMtgXOsq", // Enter the Key ID generated from the Dashboard
+  key: "rzp_test_SvLkqBRU6KmZIi", // Enter the Key ID generated from the Dashboard
   amount: "1000",
   currency: "INR",
   description: "Acme Corp",
