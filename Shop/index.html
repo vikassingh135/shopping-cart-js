@@ -8,20 +8,20 @@
     <title>MeShop Shop</title>
   </head>
   <body>
-    <!-- Nav Section -->
-    <nav>
-      <div class="nav-left">
-        <span>MeShop.</span>
-      </div>
-      <div class="nav-right">
-        <a href="/shopping-cart-js">Home</a>
-        <a href="/shopping-cart-js/Login">Login</a>
-        <a href="/shopping-cart-js/Signup">Signup</a>
-        <a href="/shopping-cart-js/Shop">Shop</a>
-        <a href="/shopping-cart-js/Cart">My Cart</a>
-        <a href="/shopping-cart-js/Profile">Profile</a>
+   <!-- Nav Section -->
+   <nav>
+    <div class="nav-left">
+      <span>MeShop.</span>
     </div>
-    </nav>
+    <div class="nav-right">
+      <a href="/shopping-cart-js">Home</a>
+      <a href="/shopping-cart-js/Login">Login</a>
+      <a href="/shopping-cart-js/Signup">Signup</a>
+      <a href="/shopping-cart-js/Shop">Shop</a>
+      <a href="/shopping-cart-js/Cart">My Cart</a>
+      <a href="/shopping-cart-js/Profile">Profile</a>
+  </div>
+  </nav>
 
     <main>
       <div class="sidebar">
@@ -47,8 +47,8 @@
             <label for="Black">Black</label>
           </div>
           <div class="checkbox">
-            <input class="color" id="White" type="checkbox" value="White"/>
-            <label for="White">White</label>
+            <input class="color" id="Orange" type="checkbox" value="Orange"/>
+            <label for="Orange">Orange</label>
           </div>
         </div>
 
@@ -89,19 +89,21 @@
           </div>
           <div class="checkbox">
             <input class="price" id="price50" type="checkbox" value="50"/>
-            <label>$25 to $50</label>
+            <label for="price50">$25 to $50</label>
           </div>
           <div class="checkbox">
             <input class="price" id="price100" type="checkbox" value="100"/>
-            <label>$50 to $100</label>
+            <label for="price100">$50 to $100</label>
           </div>
           <div class="checkbox">
             <input class="price" id="price101" type="checkbox" value="101"/>
-            <label>$100 onwards</label>
+            <label for="price101">$100 onwards</label>
           </div>
         </div>
         <div class="filer">
-          <button id="filter-btn">Apply Filter</button>
+          <button id="filter-btn"><span>Apply Filter</span><span class="material-symbols-outlined">
+            filter_alt
+            </span></button>
         </div>
       </div>
       <div class="right-side">

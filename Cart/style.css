@@ -186,3 +186,10 @@ main {
   font-size: 40px;
   font-weight: bold;
 }
+
+#rzp-button1, .remove-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

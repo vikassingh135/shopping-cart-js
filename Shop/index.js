@@ -89,30 +89,38 @@ const displayFilterProduct = (product, colors, sizes, rating, prices) => {
   if (prices.length > 0 && !inPriceRange(product.price, prices)) return;
 
   products.innerHTML += `
-        <div class="product">
-              <div class="image">
-                <img
-                  src=${product.image}
-                />
-              </div>
-              <div class="details">
-                <div class="product-title">
-                   ${product.title.substr(0, 40)}
-                </div>
-                <div class="price-size">
-                  <div class="price"><b>Price :</b> $${product.price}</div>
-                  <div class="size"><b>Size :</b> ${product.size}</div>
-                </div>
-                <div class="color"><b>Color :</b> ${product.color}</div>
-                <div class="rating"><b>Rating :</b> ${
-                  product.rating.rate
-                }/5</div>
-              </div>
-              <div class="add-cart-btn">
-                <button onclick="addToCart(${product.id})">Add To Cart</button>
-              </div>
+  <div class="product">
+        <div class="image">
+          <img
+            src=${product.image}
+          />
         </div>
-     `;
+        <div class="details">
+          <div class="product-title">
+             ${product.title.substr(0, 40)}
+          </div>
+          <div class="price-size">
+            <div class="price"><b>Price :</b> $${product.price}</div>
+            <div class="size"><b>Size :</b> ${product.size}</div>
+          </div>
+          <div class="color color-card"><b>Color :</b> <span class="material-symbols-outlined" style="color:${
+            product.color
+          }">
+          circle
+          </span></div>
+          <div class="rating rating-card"><b>Rating :</b>${
+            product.rating.rate
+          }/5</div>
+        </div>
+        <div class="add-cart-btn">
+          <button class="add-item" onclick="addToCart(${
+            product.id
+          })"><span>Add To Cart</span><span class="material-symbols-outlined">
+          add_circle
+          </span></button>
+        </div>
+  </div>
+`;
 };
 
 //function to add item to cart

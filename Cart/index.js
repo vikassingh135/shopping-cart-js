@@ -43,8 +43,10 @@ const displayProduct = (product, id) => {
                   <div class="size">Size : L</div>
                 </div>
                 </div>
-              <div class="add-cart-btn">
-                <button onclick='removeProduct(${id})'>Remove From Cart</button>
+                <div class="add-cart-btn">
+                <button class="remove-item" onclick='removeProduct(${id})'><span>Remove From Cart</span><span class="material-symbols-outlined">
+                delete
+                </span></button>
               </div>
         </div>
     `;

@@ -197,3 +197,34 @@ main {
 .checkbox{
   margin-bottom: 3px;
 }
+
+.add-item{
+  font-size: 1.01rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#filter-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  margin: 3px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 100,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.color-card, .rating-card{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
