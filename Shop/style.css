@@ -37,7 +37,7 @@ a{
 
 main {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  /* grid-template-columns: 1fr 5fr; */
 }
 
 .sidebar {
@@ -80,6 +80,7 @@ main {
 }
 
 .right-side {
+  /* border: 10px solid red; */
   padding: 20px;
   margin-top: 70px;
   margin-left: 200px;
