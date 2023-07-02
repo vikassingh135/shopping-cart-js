@@ -137,7 +137,7 @@ const addToCart = async (id) => {
 
 // function to find random color
 const randomColor = () => {
-  let colors = ["Red", "Blue", "Green", "Black", "White"];
+  let colors = ["Red", "Blue", "Green", "Black", "Orange"];
   return colors[Math.floor(Math.random() * 5)];
 };
 
